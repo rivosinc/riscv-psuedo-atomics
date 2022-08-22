@@ -1,0 +1,26 @@
+[package]
+name = "riscv-pseudo-atomics"
+authors = ["Rivos, Inc"]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.59.0"
+description = "A drop-in replacement for core::sync::atomic on RISC-V"
+readme = "./README.md"
+license = "Apache-2.0"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+riscv = "0.8.0"
+cfg-if = "1.0.0"
+
+[features]
+default = ["atomic_8", "atomic_16", "atomic_32", "atomic_64", "atomic_ptr"]
+atomic_8    = []
+atomic_16   = []
+atomic_32   = []
+atomic_64   = []
+atomic_128  = []
+atomic_ptr  = []
+user-mode   = [] # Disables interrupt control
