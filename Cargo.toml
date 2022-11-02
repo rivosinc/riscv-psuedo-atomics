@@ -12,7 +12,7 @@ license = "Apache-2.0"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-riscv = "0.8.0"
+riscv = { git = "https://github.com/rivosinc/riscv", rev = "dd25da0" }
 cfg-if = "1.0.0"
 
 [features]
